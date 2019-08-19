@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   lemin.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmraz <mmraz@student.42.fr>                +#+  +:+       +#+        */
+/*   By: pben <pben@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/06 12:55:54 by mmraz             #+#    #+#             */
-/*   Updated: 2019/08/13 18:41:17 by mmraz            ###   ########.fr       */
+/*   Updated: 2019/08/19 15:51:55 by pben             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ typedef struct s_room	t_room;
 typedef struct      s_conn
 {
 	t_room          *room;
+	int				connect;
+	int				number_room;
 	struct s_conn	*next;
 }                   t_conn;
 
@@ -70,4 +72,6 @@ int			check_coord(int x, int y, t_farm *farm);
 t_room		*new_room(char **argv, t_farm *farm);
 t_room		*allocate_room();
 
+/* algoritm*/
+char  	**algo(t_farm *farm);
 #endif
